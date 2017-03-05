@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <title>后台管理</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- 引入echarts文件 -->
+    <script src="js/echarts.js"></script>
+    <!--引入css-->
+    <link rel="stylesheet" href="css/index-main.css">
+</head>
+<body>
+<!-- 左侧边栏内容 -->
+<div id="sidebar" class="sidebar-open sidebar">
+    <!-- 顶部 -->
+    <div class="sidebar-header">
+        <h1 class="sidebar-title">
+            <span class="glyphicon glyphicon-eye-open"></span>
+            <span>logo</span>
+        </h1>
+    </div>
+    <!-- 左侧导航主体开始 -->
+    <div class="sidebar-body">
+        <!-- 导航内容 -->
+        <ul class="menu-list-1">
+            <li>
+                <a href="#primaryData" class="menu menu-open">
+                    <span class="icon-left glyphicon glyphicon-blackboard"></span>
+                    <span>数据总览</span>
+                </a>
+                <ul class="menu-list-2">
+                    <li>
+                        <a href="#f1" class="switch-f1 active">
+                            <span class="icon-left glyphicon glyphicon-home"></span>
+                            <span>经营概况</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#f2" class="switch-f2">
+                            <span class="icon-left glyphicon glyphicon-stats"></span>
+                            <span>流量统计</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sell" class="menu">
+                    <span class="icon-left glyphicon glyphicon-shopping-cart"></span>
+                    <span>销售统计</span>
+                </a>
+                <ul class="menu-list-2">
+                    <li>
+                        <a href="#f3" class="switch-f3">
+                            <span class="icon-left glyphicon glyphicon-tags"></span>
+                            <span>热门商品</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#f4" class="switch-f4">
+                            <span class="icon-left glyphicon glyphicon-map-marker"></span>
+                            <span>热门城市</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#serve" class="menu">
+                    <span class="icon-left glyphicon glyphicon-thumbs-up"></span>
+                    <span>服务质量</span>
+                </a>
+                <ul class="menu-list-2">
+                    <li>
+                        <a href="#f5" class="switch-f5">
+                            <span class="icon-left glyphicon glyphicon-home"></span>
+                            <span>经营概况</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#f6" class="switch-f6">
+                            <span class="icon-left glyphicon glyphicon-stats"></span>
+                            <span>流量统计</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部 -->
+    <div class="sidebar-footer">
+        <h1 class="sidebar-brand">about</h1>
+        <ul class="sidebar-help">
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">联系管理员</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+        <p class="copyright">from yanyuxing</p>
+    </div>
+</div>
+<div class="navbar-fixed navbar" id="navbar">
+    <div class="navbar-main">
+        <!--头部部分-->
+        <div class="navbar-left">
+            <a href="#" id="sidebarSwitch" class="fun off">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="fun" id="end">
+                <span class="glyphicon glyphicon-off"></span>
+            </a>
+        </div>
+        <a href="javaScript:false" class="user">
+            <img src="img/user-pic.jpg">
+            <span>827978555@qq.com</span><br>
+						<span>18613842773@163.com</span>
+        </a>
+    </div>
+</div>
+<!-- 主要内容 -->
+<div class="main">
+    <div class="container-fluid">
+        <!-- 主要数据图表 -->
+        <div id="primaryData">
+            <!-- 标题 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-header">
+                        <span class="icon-left glyphicon glyphicon-blackboard"></span>
+                        数据总览
+                    </h3>
+                </div>
+            </div>
+            <!-- f1 -->
+            <div id="f1" data-switch=".switch-f1">
+                <!-- 第一行 昨日数据总览4格子 -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="data-index bg-grenn">
+                            <div class="data-icon">
+                                <span class="glyphicon glyphicon-yen"></span>
+                            </div>
+                            <div class="data-title">
+                                支付金额
+                            </div>
+                            <table class="data-table">
+                                <tr>
+                                    <td>昨日全天</td>
+                                    <td class="data-data">200</td>
+                                </tr>
+                                <tr>
+                                    <td>行业排名</td>
+                                    <td class="data-data">1000+</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="data-index bg-red">
+                            <div class="data-icon">
+                                <span class="glyphicon glyphicon-fire"></span>
+                            </div>
+                            <div class="data-title">
+                                访问量
+                            </div>
+                            <table class="data-table">
+                                <tr>
+                                    <td>昨日全天</td>
+                                    <td class="data-data">8524</td>
+                                </tr>
+                                <tr>
+                                    <td>手机占比</td>
+                                    <td class="data-data">79%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="data-index bg-pink">
+                            <div class="data-icon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                            <div class="data-title">
+                                访客数
+                            </div>
+                            <table class="data-table">
+                                <tr>
+                                    <td>昨日全天</td>
+                                    <td class="data-data">842</td>
+                                </tr>
+                                <tr>
+                                    <td>回头客</td>
+                                    <td class="data-data">190</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="data-index bg-blue">
+                            <div class="data-icon">
+                                <span class="glyphicon glyphicon-list-alt"></span>
+                            </div>
+                            <div class="data-title">
+                                订单数
+                            </div>
+                            <table class="data-table">
+                                <tr>
+                                    <td>昨日全天</td>
+                                    <td class="data-data">320</td>
+                                </tr>
+                                <tr>
+                                    <td>手机占比</td>
+                                    <td class="data-data">85</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二行 数据走势图 & 今日业绩完成情况 -->
+                <div class="row">
+                    <!-- 访问量走势图 -->
+                    <div class="col-md-9 col-xs-12" id="sales">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-icon">
+                                    <span class="glyphicon glyphicon-signal"></span>
+                                </div>
+                                <div class="panel-title">经营概况</div>
+                                <div class="panel-actions">
+                                    <a href="#sales" class="btn-repeat">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                    </a>
+                                    <a href="#sales" class="btn-close">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="chart chart-sales" id="chartSale"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 今日目标达成情况 -->
+                    <div class="col-md-3 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="chart chart-rate" id="chartRate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- f2 -->
+            <div id="f2" data-switch=".switch-f2">
+                <!-- 全屏大图行 -->
+                <div class="row">
+                    <div class="col-xs-12" id="visit">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-icon">
+                                    <span class="glyphicon glyphicon-stats"></span>
+                                </div>
+                                <div class="panel-title">流量趋势</div>
+                                <div class="panel-actions">
+                                    <a href="#visit" class="btn-repeat">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                    </a>
+                                    <a href="#visit" class="btn-close">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 内容部分 -->
+                            <div class="panel-body">
+                                <div class="chart chart-visit" id="chartVisit"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 流量表格行 -->
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="panel panel-default" id="tableVisit">
+                            <div class="panel-heading">
+                                <div class="panel-icon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </div>
+                                <div class="panel-title">TOP榜</div>
+                                <div class="panel-actions">
+                                    <a href="#tableVisit" class="btn-repeat">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                    </a>
+                                    <a href="#tableVisit" class="btn-close">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                </div>
+                                <div class="panel-tab">
+                                    <a href="#visitConten" class="tab-active" data-url="tableVisitPC">PC端</a>
+                                    <a href="#visitConten" class="" data-url="tableVisitMB">移动端</a>
+                                </div>
+                            </div>
+                            <!-- 内容部分 -->
+                            <div class="panel-body">
+                                <table class="table" id="visitConten">
+                                    <thead>
+                                    <tr>
+                                        <th>流量来源</th>
+                                        <th>订单数</th>
+                                        <th>转化率</th>
+                                        <th>占比</th>
+                                    </tr>
+                                    </thead>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <!-- 流量构成图 -->
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div class="chart chart-pie" id="chartPie"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sell">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="page-header">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        销售统计
+                    </h3>
+                </div>
+            </div>
+            <!-- 热门商品 -->
+            <div id="f3" data-switch=".switch-f3">
+                <div class="row">
+                    <!-- 轮播图片 -->
+                    <div class="col-md-6 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="banner" id="banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 热门商品表格 -->
+                    <div class="col-md-6 col-xs-12">
+                        <div class="panel panel-default" id="tableGoodS">
+                            <div class="panel-heading">
+                                <div class="panel-icon">
+                                    <span class="glyphicon glyphicon-fire"></span>
+                                </div>
+                                <div class="panel-title">热卖榜</div>
+                                <div class="panel-actions">
+                                    <a href="#tableGoodS" class="btn-repeat">
+                                        <span class="glyphicon glyphicon-repeat"></span>
+                                    </a>
+                                    <a href="#tableGoodS" class="btn-close">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- 内容部分 -->
+                            <div class="panel-body">
+                                <table class="table" id="Goodscontent">
+                                    <thead>
+                                    <tr>
+                                        <th>商品名称</th>
+                                        <th>单价</th>
+                                        <th>成交量</th>
+                                        <th>好评率</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 热门地区 -->
+            <div id="f4" data-switch=".switch-f4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-12" id="map">
+                                <!-- 地图map -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="panel-icon">
+                                            <span class="glyphicon glyphicon-map-marker"></span>
+                                        </div>
+                                        <div class="panel-title">热门购买城市</div>
+                                        <div class="panel-actions">
+                                            <a href="#map" class="btn-repeat">
+                                                <span class="glyphicon glyphicon-repeat"></span>
+                                            </a>
+                                            <a href="#map" class="btn-close">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="chart chart-hot—city" id="hotMap"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="chart chart-hot—city" id="hotPie"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div id="serve">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+                        <!--<h3 class="page-header">-->
+                            <!--<span class="glyphicon glyphicon-thumbs-up"></span>-->
+                            <!--服务质量-->
+                        <!--</h3>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="f5" data-switch=".switch-f5">-->
+                    <!--&lt;!&ndash; 全屏大图行 &ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-12">-->
+                            <!--<div class="panel panel-default">-->
+                                <!--<div class="panel-heading">-->
+                                    <!--<div class="panel-icon">-->
+                                        <!--<span class="glyphicon glyphicon-stats"></span>-->
+                                    <!--</div>-->
+                                    <!--<div class="panel-title">流量趋势</div>-->
+                                    <!--<div class="panel-actions">-->
+                                        <!--<a href="#visit" class="btn-repeat">-->
+                                            <!--<span class="glyphicon glyphicon-repeat"></span>-->
+                                        <!--</a>-->
+                                        <!--<a href="#visit" class="btn-close">-->
+                                            <!--<span class="glyphicon glyphicon-remove"></span>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; 内容部分 &ndash;&gt;-->
+                                <!--<div class="panel-body">-->
+                                    <!--内容-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; 流量表格行 &ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-6 col-xs-12">-->
+                            <!--<div class="panel panel-default">-->
+                                <!--<div class="panel-heading">-->
+                                    <!--<div class="panel-icon">-->
+                                        <!--<span class="glyphicon glyphicon-calendar"></span>-->
+                                    <!--</div>-->
+                                    <!--<div class="panel-title">TOP榜</div>-->
+                                    <!--<div class="panel-actions">-->
+                                        <!--<a href="#tableVisit" class="btn-repeat">-->
+                                            <!--<span class="glyphicon glyphicon-repeat"></span>-->
+                                        <!--</a>-->
+                                        <!--<a href="#tableVisit" class="btn-close">-->
+                                            <!--<span class="glyphicon glyphicon-remove"></span>-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="panel-tab">-->
+                                        <!--<a href="#visitConten" class="tab-active" data-url="tableVisitPC">PC端</a>-->
+                                        <!--<a href="#visitConten" class="" data-url="tableVisitMB">移动端</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; 内容部分 &ndash;&gt;-->
+                                <!--<div class="panel-body">-->
+                                   <!--内容-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-6 col-xs-12">-->
+                            <!--&lt;!&ndash; 流量构成图 &ndash;&gt;-->
+                            <!--<div class="panel">-->
+                                <!--<div class="panel-body">-->
+                                    <!--内容-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!-- 栅格主体 -->
+</div><!-- 内容主体 -->
+<!-- 服务统计模态框 -->
+<div class="modeal-container container-fluid" style="display: none">
+    <div id="modeal" class="modeal">
+        <div class="container-fluid">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="panel-icon">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </div>
+                    <div class="panel-title">评价分析</div>
+                    <div class="panel-actions">
+                        <a href="#sales" class="btn-repeat">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </a>
+                        <a href="#sales" id="modealClose">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-body">
+                            <div class="chart chart-radar" id="radar">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/radar.js"></script>
+<script src="js/index.js"></script>
+<script src="js/map.js"></script>
+<!--<script>-->
+<!--$('[data-toggle="tooltip"]').tooltip();-->
+<!--</script>-->
+<script>
+//    (function () {
+//        var s = document.createElement("script");
+//        s.onload = function () {
+//            bootlint.showLintReportForCurrentDocument([]);
+//        };
+//        s.src = "js/bootlint.js";
+//        document.body.appendChild(s)
+//    })();
+</script>
+</body>
+</html>
