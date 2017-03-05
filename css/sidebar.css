@@ -1,0 +1,143 @@
+.bg-red {
+  background-color: #d95043;
+}
+.bg-grenn {
+  background-color: #26c281;
+}
+.bg-blue {
+  background-color: #57889c;
+}
+.bg-pink {
+  background-color: #e65097;
+}
+body {
+  background-color: #E6E8EA;
+}
+.sidebar-show {
+  padding-left: 240px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  color: #cccccc;
+  overflow: hidden;
+  z-index: 100;
+  background-color: #181D20;
+}
+.sidebar .active {
+  background: #D95043;
+  color: #FFF;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar a {
+  display: inline-block;
+  color: #848788;
+  height: 38px;
+  width: 100%;
+  text-decoration: none;
+  line-height: 38px;
+}
+.sidebar a:hover {
+  color: #ffffff;
+}
+.sidebar span.icon-left {
+  margin-right: 15px;
+}
+.sidebar .sidebar-header {
+  position: relative;
+  z-index: 150;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  border-top: 1px solid transparent;
+}
+.sidebar .sidebar-header h1.sidebar-title {
+  font-size: 2em;
+  margin: 20px 0px 25px 0px;
+}
+.sidebar .sidebar-body {
+  position: relative;
+  height: 80%;
+  z-index: 100;
+  clear: both;
+  overflow: hidden;
+}
+.sidebar .sidebar-body .menu-list-1 a {
+  padding-left: 25px;
+}
+.sidebar .sidebar-body .menu-list-2 {
+  display: none;
+}
+.sidebar .sidebar-body .menu-list-2 a {
+  padding-left: 45px;
+}
+.sidebar .sidebar-body .menu-open > ul {
+  display: block;
+}
+.sidebar .sidebar-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+  height: 150px;
+  width: 240px;
+  clear: both;
+  background-color: inherit;
+  text-align: center;
+}
+.sidebar .sidebar-footer .sidebar-brand {
+  font-size: 2.5em;
+  color: #343434;
+}
+.sidebar .sidebar-footer .sidebar-help {
+  margin: 0 0 20px 0;
+}
+.sidebar .sidebar-footer .sidebar-help li {
+  display: inline-block;
+  width: 32%;
+  font-size: 0.8em;
+}
+.sidebar .sidebar-footer .sidebar-help .copyright {
+  color: #FFF;
+  font-size: 0.8em;
+}
+.data-index {
+  width: 100%;
+  height: auto;
+  margin: 20px 0px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+}
+.data-index .data-icon {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 50px;
+  height: 100px;
+  width: 50px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 100px;
+  float: left;
+}
+.data-index .data-title {
+  float: left;
+  color: #FFF;
+  width: 60%;
+  font-size: 1.8em;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.data-index .data-table {
+  float: left;
+  color: #fff;
+  width: 60%;
+}
+.data-index .data-table .data-data {
+  color: #DDeeee;
+}

@@ -1,0 +1,87 @@
+/*主体样式*/
+body {
+  min-height: 100%;
+  background: #e6e8ea;
+  position: relative;
+  color: #4c4f53 !important;
+}
+/*登陆页样式*/
+.login-box {
+  padding: 20px;
+  min-width: 360px;
+  max-width: 400px;
+  min-height: 335px;
+  margin: 110px auto;
+  background: #fff;
+  /*生成恒直线*/
+}
+.login-box .login-head {
+  font-size: 20px;
+  color: #FFF;
+  background-color: #57889c;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: -20px -20px 10px -20px;
+}
+.login-box .about-user {
+  text-align: center;
+  /*用户头像*/
+}
+.login-box .about-user img {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #20a8d8;
+  border-radius: 50%;
+}
+.login-box .hr {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  z-index: 0;
+}
+.login-box .hr span {
+  width: 20%;
+  padding: 5px;
+  height: inherit;
+  background-color: #FFF;
+  position: relative;
+  text-align: center;
+}
+.login-box .hr:before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: -1;
+  border: 1px solid #DDD;
+}
+.login-box .form-style {
+  margin-bottom: 5px;
+}
+.login-box .form-style .rememberPWD {
+  /*记住密码样式*/
+  margin-left: -15px;
+}
+.login-box .form-style .btn-style {
+  color: #FFF;
+  border-color: #ffffff;
+  background-color: #00aced;
+  border-radius: 0;
+  border-bottom: 0;
+}
+/*login-box*/
+/*表单验证提示*/
+.input-prompt .glyphicon-ok {
+  color: #26c281;
+}
+.input-prompt .glyphicon-remove {
+  color: #d95043;
+}
+.warning {
+  margin-left: -10px;
+  color: red;
+  width: 100%;
+  display: none;
+}
